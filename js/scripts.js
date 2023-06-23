@@ -30,10 +30,29 @@ let pokemonRepository = (function () {
     function add(pokemon) {
         pokemonList.push(pokemon);
     }
+    // to add list on html and Function creates a button element for each Pokémon.
+    function addListItem(pokemon) {
+        let pokemonsList = document.querySelector('.pokemon-list');
+        let listPokemons = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('button-class');
+        listPokemons.appendChild(button);
+        pokemonsList.appendChild(listPokemons);
+        //showDetails logs the Pokémon's name to the console.
+        button.addEventListener('click', function () {
+            showDetails(pokemon);
+        });
+    }
+    function showDetails(pokemon) {
+        console.log(pokemon.name);
+    }
 
     return {
         getAll: getAll,
-        add: add
+        add: add,
+        addListItem: addListItem,
+        showDetails:showDetails
     };
 
 })();
@@ -47,5 +66,7 @@ pokemonRepository.add(
 console.log(pokemonRepository.getAll());
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-    document.write(pokemon.name + " (height: " + pokemon.height + ") <br>");
+    pokemonRepository.addListItem(pokemon);
 });
+
+
