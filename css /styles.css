@@ -1,0 +1,19 @@
+/* style for button */
+
+.button-class {
+    border: 2px solid black;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 20px;
+    background-color: #ede8e4;
+    color: #160202;
+    text-decoration: none;
+    padding: 22px 32px;
+    width: auto;
+    height: 1.1;
+    margin: 4px 2px;
+    border-radius: 5px;
+    border-bottom: 5px solid #1a11114d;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
