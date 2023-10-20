@@ -13,6 +13,7 @@
 - CSS
 - JavaScript
 - JQuery
+- BootStrap
 
 ## Goal:
 - users should be able to view a list of data and see more details for a given data item.
